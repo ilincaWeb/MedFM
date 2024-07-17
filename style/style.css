@@ -1,0 +1,1044 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7em;
+  
+}
+
+a{
+  color: #333;
+  text-decoration: none;
+}
+
+h1,h2,h3{
+  padding-bottom: 20px;
+}
+
+p{
+  padding: 10px;
+}
+
+.container{
+  margin: auto;
+  max-width: 1100px;
+  overflow: auto;
+  padding: 0 20px;
+}
+
+.container.container-home{
+  margin-top:100px;
+}
+
+.text-primary{
+  color: #618264;
+}
+
+.lead{
+  font-size: 20px;
+}
+
+.btn{
+  display: inline-block;
+  font-size: 18px;
+  color: #fff;
+  background: #BFD8AF;
+  padding: 13px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn:hover{
+  background: #E1F0DA;
+  color: #618264;
+}
+
+.btn-dark{
+  display: inline-block;
+  font-size: 18px;
+  color: #fff;
+  background: #618264;
+  padding: 13px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.bg-dark{
+  background: #618264;
+  color: #fff;
+}
+
+.bg-primary{
+  background: #E1F0DA;
+  color: #333;
+}
+
+.why{
+  color: #B0D9B1;
+}
+
+.clr{
+  clear: both;
+}
+
+/*Navbar*/
+#navbar{
+  background: #618264;
+  color: #fff;
+  overflow: auto;
+}
+
+#navbar a{
+  color: #fff;
+}
+
+#navbar h1{
+  float: left;
+  padding-top: 20px;
+}
+
+#navbar ul{
+  list-style: none;
+  float: right;
+}
+
+#navbar ul li{
+  float: left;
+}
+
+#navbar ul li a{
+  display: block;
+  padding: 20px;
+  text-align: center;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a.current{
+  background: #79AC78;
+  color: #fff;
+}
+
+
+
+/*Showcase*/
+#showcase{
+  background: url('/img/bg-50-filter.png') no-repeat center center/cover;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#showcase .container {
+  max-width: 800px; /* Adjust as needed */
+  padding: 0 20px;
+}
+
+
+
+#showcase .showcase-container {
+  color: #202120;
+  text-align: center; /* Align items horizontally to center */
+}
+
+#showcase .showcase-container h1{
+  font-size: 60px;
+  line-height: 1.2em;
+  color: #A0C49D;
+} 
+
+#showcase .showcase-container p{
+  padding-bottom: 20px;
+  line-height: 1.7em;
+  font-weight: 450;
+}
+
+#showcase .showcase-container ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#showcase .showcase-container ul li {
+  display: inline-block;
+}
+
+#showcase .showcase-container ul li a {
+  display: block;
+  font-size: 18px;
+  color: #fff;
+  background: #618264;
+  padding: 13px 20px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+#showcase .showcase-container ul li a:hover {
+  background: #79AC78;
+  color: #fff;
+}
+
+
+/* Home Info */
+
+#home-info {
+  height: 400px;
+}
+
+#home-info .info-img{
+  float: left;
+  width: 50%;
+  background-image: url('/img/picussm.jpg'); /* Asigură-te că calea este corectă */
+  background-size: cover;
+  background-position: center;
+  min-height: 100%; 
+}
+
+#home-info .info-content{
+  float: right;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  padding: 50px 30px;
+  overflow: hidden;
+}
+
+#home-info .info-content p {
+  padding-bottom: 30px;
+}
+
+
+/* Features */
+.box{
+  float: left;
+  width: 33.3%;
+  padding: 50px;
+  text-align: center;
+}
+
+.box i{
+  margin-bottom: 10px;
+}
+
+
+
+.button-container ul {
+  list-style: none;
+  padding: 0; /* Remove default padding */
+  display: flex; /* Set to flex container */
+  justify-content: center; /* Center items horizontally */
+  margin-top: 50px;
+}
+
+.button-container .btn {
+  margin: 0 20px; /* Add space between buttons */
+  border-radius: 7px;
+  }
+
+
+  #sidebar {
+    width: 50px; /* Initial width */
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    transition: width 0.3s ease; /* Transition effect for width change */
+    z-index: 999;
+    display: flex;
+    
+    align-items: center; /* Vertically center items */
+  }
+
+  .sidebar-icon {
+    margin-top: auto; /* Move icon to the bottom */
+    width: 50px; /* Same width as sidebar */
+    display: flex;
+    align-items: center; /* Horizontally center icon */
+    justify-content: center; /* Vertically center icon */
+  }
+
+  .sidebar-icon i {
+    color: #fff;
+  }
+  
+  #sidebar:hover {
+    width: 200px; /* Width on hover */
+  }
+  
+  #sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #sidebar ul li {
+    padding: 10px;
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.3s ease; /* Transition effect for opacity change */
+   
+  }
+  
+  #sidebar:hover ul li {
+    opacity: 1; /* Make visible on hover */
+    display: block;
+  }
+  
+  #sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: flex; /* Use flexbox to align icon and text vertically */
+    align-items: center; /* Vertically center icon and text */
+    padding: 10px;
+   
+  }
+  #sidebar ul li a i {
+    margin-right: 10px; /* Add margin between icon and text */
+  }
+
+  #sidebar ul li a:hover {
+    background-color: #555;
+  }
+  
+
+
+
+/*Navbar*/
+#navbar.navsticky{
+  background: #618264;
+  color: #fff;
+  overflow: auto;
+  z-index: 1000; /* Ensure navbar appears above sidebar */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Add padding to navbar to avoid being covered by sidebar */
+#navbar .container {
+  padding-left: 20px;
+}
+
+/* Adjust navbar links to avoid being covered by sidebar */
+#navbar ul li a {
+  padding: 20px 15px;
+}
+
+
+
+
+
+
+.calendar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    background-color: #f4f4f4;
+    padding-top: 60px; /* Pentru a evita suprapunerea cu navbarul */
+    padding-bottom: 20px; /* Pentru a evita suprapunerea cu footerul */
+}
+
+/* Stilizare pentru calendar */
+#calendar {
+  max-width: 900px;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.fc-toolbar-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.fc-button-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.fc-button-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Stilizare pentru rândurile și coloanele calendarului */
+.fc .fc-col-header-cell-cushion {
+  padding: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+.fc-timegrid-slot-label-cushion {
+  padding: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.fc-timegrid-slot {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.fc-timegrid-slot:hover {
+  background-color: #f1f1f1;
+}
+
+.fc-timegrid-axis-cushion {
+  font-weight: bold;
+  color: #777;
+}
+
+.fc-daygrid-day {
+  border-right: 1px solid #e6e6e6;
+}
+
+.fc-daygrid-day:hover {
+  background-color: #f1f1f1;
+}
+
+.fc-timegrid-event {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+
+.fc-timegrid-event:hover {
+  background-color: #0056b3;
+}
+
+/* Stilizare pentru ziua curentă */
+.fc .fc-day-today {
+  background-color: #E1F0DA !important; /* Schimbă culoarea de fundal */
+  color: #000; /* Schimbă culoarea textului */
+}
+
+.fc .fc-day-today .fc-daygrid-day-number {
+  color: #000; /* Schimbă culoarea numerelor zilei curente */
+}
+
+.fc .fc-day-today .fc-timegrid-col-frame {
+  background-color: #E1F0DA !important; /* Schimbă culoarea de fundal pentru vizualizarea timeGrid */
+}
+
+/* Stilizare pentru footer */
+.footer {
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+}
+/* Footer */
+#main-footer{
+  text-align: center;
+  background: #618264;
+  color: #fff;
+  padding: 20px;
+}
+
+#secondary-footer{
+  text-align: center;
+  background: #618264;
+  color: #fff;
+  padding-bottom: 0;
+  height: 50px;
+}
+
+/*MEDICAL RECORDS*/
+.medical-container{
+  margin-top: 230px;  
+ 
+}
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+ 
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 300px;
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card.card-text {
+  font-size: 25px;
+}
+
+/*NEW MEDICAL RECORDS*/
+
+
+.crads-grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 400px);
+  column-gap: 10px; /* Add horizontal gap */
+  row-gap: 10px; /* Set a smaller vertical gap if needed */
+  justify-content: center; /* Center the grid horizontally */
+  align-items: center; /* Center the grid vertically */
+  margin-top: 200px;  
+}
+
+.card-new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 200px;
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  
+}
+
+.card-new:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Chat Container */
+.chat-container {
+  margin: auto;
+  width: 500px; /* Set a wider width for the inbox-container */
+  max-width: 800px; /* Adjust max-width to your desired value */
+  padding: 0 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 550px;
+  margin-bottom: 29px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+}
+
+.chat-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.chat-messages {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.chat-message {
+  margin-bottom: 10px;
+}
+
+.chat-message span {
+  font-weight: bold;
+}
+
+.chat-date {
+  text-align: center;
+  margin: 10px 0;
+  font-style: italic;
+}
+
+.chat-form {
+  display: flex;
+}
+
+.chat-form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px 0 0 5px;
+}
+
+.chat-form button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-left: none;
+  background-color: #618264;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.chat-form button:hover {
+  background-color: #79AC78;
+}
+
+/* Inbox Container */
+.inbox-container {
+  margin: auto;
+  width: 50%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.inbox-notification {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+}
+
+.inbox-notification:hover {
+  background-color: #e1f0da;
+}
+
+/* Adăugăm stiluri noi pentru butonul de mesagerie */
+.message-button {
+  position: fixed;
+  bottom: 7%;
+  right: 4%;
+  width: 55px;
+  height: 55px;
+  background-color: #618264;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  margin-bottom: 30px;
+}
+
+.message-button:hover {
+  background-color: #79AC78;
+}
+
+.message-button i {
+  font-size: 24px;
+}
+
+.btn-mesaje:hover{
+  color: white;
+}
+
+.btn.btn-programari{
+  background: #BFD8AF;
+  color: #f3f3f3;
+}
+
+.btn.btn-programari:hover{
+  background-color: #618264;
+}
+
+.notification-badge {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  padding: px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  line-height: 20px;
+}
+.navbar-item {
+  position: relative;
+}
+
+.card.card-web{
+  width: 350px;
+  height: 120px;
+  margin-top: 50px;
+}
+
+.container.container-home.web{
+  height: 100hv;
+}
+
+
+.container-sfat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Adaugă spațiu între imagine și paragraf */
+  height: 100%;
+}
+
+.container-sfat img {
+  width: 499px;
+  height: 500px;
+}
+
+.container-sfat p {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px; /* Font size increased for better readability */
+}
+
+.container-sfat .sfat-titlu {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 30px;
+  
+  font-size: 30px; /* Slightly larger font size for the title */
+}
+.container-sfat .sfat-mesaj {
+  font-size: 18px; /* Normal font size for the message */
+  display: block;
+}
+
+.sfat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.btn-particip{
+  background: #618264;
+}
+
+.input-container {
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  align-items: center; /* Aliniază vertical input-ul */
+}
+
+.message-container {
+  flex-grow: 1; /* Face ca acest container să ocupe tot spațiul disponibil */
+  overflow-y: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-elements {
+  display: flex;
+  gap: 30px;
+  align-items: center; /* Aliniază elementele pe verticală */
+  padding: 20px; /* Padding pentru a crea spațiu în interiorul footerului */
+  padding-bottom: 0px;
+}
+
+.footer-item a {
+  text-decoration: none; /* Elimină sublinierea linkurilor */
+  color: #f4f4f4; /* Culoarea textului (poți schimba culoarea) */
+  transition: color 0.3s ease; /* Tranziție pentru schimbarea culorii */
+}
+
+.footer-item a:hover {
+  color: #A0C49D; /* Culoarea textului la hover (poți schimba culoarea) */
+}
+
+
+#secondary-footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #618264;
+  color: #fff;
+  padding-bottom: 0;
+  height: 100px;
+}
+
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Reducem lățimea modalului */
+  box-sizing: border-box; /* Asigurăm că paddingul este inclus în lățime */
+}
+
+.modal-content p,
+.modal-content h2,
+.modal-content h3 {
+  padding: 0 20px; /* Adăugăm padding pentru text */
+}
+.modal-content h2 {
+  padding-bottom: 20px;
+}
+.modal-content h3 {
+  padding-top: 20px;
+}
+
+.modal-content ul {
+  list-style: none; /* Eliminăm markerii standard */
+  padding-left: 50px;
+}
+
+.modal-content ul li {
+  position: relative; 
+  padding-left: 20px; /* Adăugăm padding la stânga pentru marker personalizat */
+}
+
+.modal-content ul li::before {
+  content: '•'; /* Adăugăm marker personalizat */
+  position: absolute;
+  left: 0;
+  color: black; /* Stilizăm markerul */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  padding-right: 20px; /* Adăugăm padding pentru butonul de închidere */
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#secondary-footer.small{
+  height: 50px;
+}
+
+
+/*MEDIA QUERIES*/
+/* Smaller desktops: max-width: 1344px (84em) */
+@media (max-width: 84em) {
+  .container {
+    max-width: 90%;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+
+  .chat-container {
+    width: 90%;
+  }
+
+  .inbox-container {
+    width: 90%;
+  }
+
+  .cards-container .card {
+    width: 90%;
+  }
+
+  .medical-container .cards-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .medical-container .cards-container .card {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+/* Landscape tablets: max-width: 1200px (75em) */
+@media (max-width: 75em) {
+  #showcase .showcase-container h1 {
+    font-size: 50px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .chat-container {
+    width: 80%;
+  }
+
+  .inbox-container {
+    width: 80%;
+  }
+
+  .cards-container .card {
+    width: 80%;
+  }
+
+  .medical-container .cards-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .medical-container .cards-container .card {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+/* Tablets: max-width: 944px (59em) */
+@media (max-width: 59em) {
+  #showcase .showcase-container h1 {
+    font-size: 40px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .box {
+    width: 50%;
+  }
+
+  .chat-container {
+    width: 70%;
+  }
+
+  .inbox-container {
+    width: 70%;
+  }
+
+  .cards-container .card {
+    width: 70%;
+  }
+
+  .medical-container .cards-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .medical-container .cards-container .card {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+/* Smaller tablets: max-width: 704px (44em) */
+@media (max-width: 44em) {
+  #showcase .showcase-container h1 {
+    font-size: 30px;
+  }
+
+  .btn {
+    font-size: 10px;
+    padding: 6px 8px;
+  }
+
+  .box {
+    width: 100%;
+  }
+
+  .chat-container {
+    width: 60%;
+  }
+
+  .inbox-container {
+    width: 60%;
+  }
+
+  .cards-container .card {
+    width: 60%;
+  }
+
+  .medical-container .cards-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .medical-container .cards-container .card {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+/* Phones: max-width: 544px (34em) */
+@media (max-width: 34em) {
+  #showcase .showcase-container h1 {
+    font-size: 20px;
+  }
+
+  .btn {
+    font-size: 8px;
+    padding: 4px 6px;
+  }
+
+  .box {
+    width: 100%;
+  }
+
+  .chat-container {
+    width: 100%;
+  }
+
+  .inbox-container {
+    width: 100%;
+  }
+
+  .cards-container .card {
+    width: 100%;
+  }
+
+  .medical-container .cards-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .medical-container .cards-container .card {
+    width: 100%;
+    margin: auto;
+  }
+}

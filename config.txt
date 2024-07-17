@@ -1,0 +1,8 @@
+cd D:\LICENTA
+php -S localhost:8000
+
+
+suport.medFM@gmail.com
+MedFM2024
+
+Toate drepturile rezervate

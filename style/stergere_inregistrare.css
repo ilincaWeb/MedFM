@@ -1,0 +1,199 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7em;
+  height: 100%;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  padding-bottom: 20px;
+}
+
+p {
+  padding: 10px;
+}
+
+.container {
+  margin: auto;
+  max-width: 1100px;
+  overflow: auto;
+  padding: 0 20px;
+}
+
+.text-primary {
+  color: #618264;
+}
+
+.lead {
+  font-size: 20px;
+}
+
+/* Navbar */
+#navbar {
+  background: #618264;
+  color: #fff;
+  overflow: auto;
+}
+
+#navbar a {
+  color: #fff;
+}
+
+#navbar h1 {
+  float: left;
+  padding-top: 20px;
+}
+
+#navbar ul {
+  list-style: none;
+  float: right;
+}
+
+#navbar ul li {
+  float: left;
+}
+
+#navbar ul li a {
+  display: block;
+  padding: 20px;
+  text-align: center;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a.current {
+  background: #79AC78;
+  color: #fff;
+}
+
+#sidebar {
+  width: 50px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  transition: width 0.3s ease;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-icon {
+  margin-top: auto;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-icon i {
+  color: #fff;
+}
+
+#sidebar:hover {
+  width: 200px;
+}
+
+#sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#sidebar ul li {
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#sidebar:hover ul li {
+  opacity: 1;
+  display: block;
+}
+
+#sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+#sidebar ul li a i {
+  margin-right: 10px;
+}
+
+#sidebar ul li a:hover {
+  background-color: #555;
+}
+
+#navbar.navsticky {
+  background: #618264;
+  color: #fff;
+  overflow: auto;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#navbar .container {
+  padding-left: 20px;
+}
+
+#navbar ul li a {
+  padding: 20px 15px;
+}
+
+/* Container Sterg */
+.container-sterg {
+  width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 300px;
+}
+
+/* Button Container */
+.button-container {
+  display: flex; /* Use flexbox to align buttons horizontally */
+  justify-content: center;
+  gap: 50px; /* Add space between buttons */
+}
+
+.button-container .btn {
+  display: inline-block;
+  font-size: 25px;
+  color: #fff;
+  background: #618264;
+  padding: 20px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.button-container .btn:hover {
+  background: #79AC78;
+  color: #fff;
+}
+
+/* Ensure all anchors have the correct styling */
+a {
+  color: #333;
+  text-decoration: none;
+}

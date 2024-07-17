@@ -1,0 +1,110 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #E1F0DA;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.card {
+  background-color: #F7FFE5;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-bottom: 30px;
+  text-align: center;
+  color: #12372A;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #F7FFE5;
+}
+
+button {
+  width: auto;
+  padding: 10px 15px;
+  background-color: #12372A;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #436850;
+}
+
+.button-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.parola {
+  text-align: center;
+  padding-bottom: 15px; /* Padding-bottom de 10px */
+}
+
+.parola a {
+  color: #12372A; /* Culoarea textului */
+  text-decoration: none; /* Fără subliniere */
+}
+
+.parola a:hover {
+  text-decoration: underline; /* Subliniere la hover */
+}
+
+/* Stilizare pentru wrapper-ul parolei */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input[type="password"],
+.password-wrapper input[type="text"] {
+  width: 100%;
+  padding-right: 40px; /* Spațiu pentru icon-ul ochiului */
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.toggle-password img {
+  width: 20px; /* Dimensiunea icon-ului */
+  height: 20px;
+
+}

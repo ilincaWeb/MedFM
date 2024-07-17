@@ -1,0 +1,274 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7em;
+  height: 100%;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  padding-bottom: 20px;
+}
+
+p {
+  padding: 10px;
+}
+
+.container {
+  margin: auto;
+  max-width: 1100px;
+  overflow: auto;
+  padding: 0 20px;
+}
+
+.text-primary {
+  color: #618264;
+}
+
+.lead {
+  font-size: 20px;
+}
+
+/* Navbar */
+#navbar {
+  background: #618264;
+  color: #fff;
+  overflow: auto;
+}
+
+#navbar a {
+  color: #fff;
+}
+
+#navbar h1 {
+  float: left;
+  padding-top: 20px;
+}
+
+#navbar ul {
+  list-style: none;
+  float: right;
+}
+
+#navbar ul li {
+  float: left;
+}
+
+#navbar ul li a {
+  display: block;
+  padding: 20px;
+  text-align: center;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a.current {
+  background: #79AC78;
+  color: #fff;
+}
+
+#sidebar {
+  width: 50px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  transition: width 0.3s ease;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-icon {
+  margin-top: auto;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-icon i {
+  color: #fff;
+}
+
+#sidebar:hover {
+  width: 200px;
+}
+
+#sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#sidebar ul li {
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#sidebar:hover ul li {
+  opacity: 1;
+  display: block;
+}
+
+#sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+#sidebar ul li a i {
+  margin-right: 10px;
+}
+
+#sidebar ul li a:hover {
+  background-color: #555;
+}
+
+#navbar.navsticky {
+  background: #618264;
+  color: #fff;
+  overflow: auto;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#navbar .container {
+  padding-left: 20px;
+}
+
+#navbar ul li a {
+  padding: 20px 15px;
+}
+
+/* Form Styles */
+.form-container {
+  width: 400px; /* Dublu față de 800px */
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff1 ;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container.container-home{
+  margin-top:350px;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  width: 100%;
+  display: flex; /* Flexbox pentru a alinia label și input pe orizontală */
+  align-items: center;
+}
+
+.form-group label {
+  flex: 1; /* Label ocupă 1 unitate din spațiul disponibil */
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+  flex: 2; /* Inputurile ocupă 2 unități din spațiul disponibil */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 50%;
+  padding: 10px;
+  background: #618264;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 100px;
+}
+
+button[type="submit"]:hover {
+  background: #79AC78;
+}
+
+body, html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background:#f4f4f4;
+}
+
+.message {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-left: 6px solid;
+}
+
+.message.error {
+  background: #ffdddd;
+  border-color: #f44336;
+}
+
+.message.success {
+  background: #ddffdd;
+  border-color: #4CAF50;
+}
+/* Stilizare pentru footer */
+.footer {
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+}
+/* Footer */
+#main-footer{
+  text-align: center;
+  background: #618264;
+  color: #fff;
+  padding: 20px;
+}
+
+#secondary-footer{
+  text-align: center;
+  background: #618264;
+  color: #fff;
+  padding-bottom: 0;
+  height: 50px;
+}

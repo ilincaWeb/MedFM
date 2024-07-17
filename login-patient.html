@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="style/login.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h2>Login</h2>
+      <form action="login_pacient.php" method="POST">
+        <div class="form-group">
+          <label for="username">User ID:</label>
+          <input type="text" id="username" name="username" pattern="\d{1,13}" maxlength="13" placeholder="your CNP" required title="User ID must be up to 13 digits">
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" pattern="\d{4}" maxlength="4" placeholder="****" required title="Password must be exactly 4 digits">
+        </div>
+        <div class="button-card">
+          <button type="submit">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

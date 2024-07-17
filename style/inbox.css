@@ -1,0 +1,543 @@
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7em;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  flex: 1;
+  margin: auto;
+  max-width: 1100px;
+  overflow: auto;
+  padding: 0 20px;
+}
+
+.container-home {
+  margin-top: 100px;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 18px;
+  color: #fff;
+  background: #BFD8AF;
+  padding: 13px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #E1F0DA;
+  color: #618264;
+}
+
+.btn-dark {
+  display: inline-block;
+  font-size: 18px;
+  color: #fff;
+  background: #618264;
+  padding: 13px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+#navbar {
+  background: #618264;
+  color: #fff;
+  height: 60px; /* Specific height for the navbar */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+  overflow: hidden; /* Ensure no scrollbars */
+}
+
+#navbar a {
+  color: #fff;
+}
+
+#navbar h1 {
+  float: left;
+  padding-top: 20px;
+}
+
+#navbar ul {
+  list-style: none;
+  float: right;
+}
+
+#navbar ul li {
+  float: left;
+}
+
+#navbar ul li a {
+  display: block;
+  padding: 20px;
+  text-align: center;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a.current {
+  background: #79AC78;
+  color: #fff;
+}
+
+#sidebar {
+  width: 50px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  transition: width 0.3s ease;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-icon {
+  margin-top: auto;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-icon i {
+  color: #fff;
+}
+
+#sidebar:hover {
+  width: 200px;
+}
+
+#sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#sidebar ul li {
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#sidebar:hover ul li {
+  opacity: 1;
+  display: block;
+}
+
+#sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+#sidebar ul li a i {
+  margin-right: 10px;
+}
+
+#sidebar ul li a:hover {
+  background-color: #555;
+}
+
+#navbar.navsticky {
+  background: #618264;
+  color: #fff;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 68px; /* Specific height for the sticky navbar */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+  overflow: hidden; /* Ensure no scrollbars */
+}
+
+#navbar .container {
+  padding-left: 20px;
+}
+
+#navbar ul li a {
+  padding: 20px 15px;
+}
+
+#secondary-footer {
+  text-align: center;
+  background: #618264;
+  color: #fff;
+  padding: 10px 0;
+  height: 50px; /* Specific height for the footer */
+  width: 100%;
+}
+
+.button-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.button-container button {
+  background-color: #ccc;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button-container .active {
+  background-color: #555;
+}
+
+.button-container .btn {
+  margin: 0 20px;
+  border-radius: 7px;
+}
+
+.inbox-container {
+  margin: auto;
+  width: 500px; /* Set a wider width for the inbox-container */
+  max-width: 800px; /* Adjust max-width to your desired value */
+  padding: 0 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 500px;
+}
+
+
+.inbox-notification {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+}
+
+
+.inbox-notification:hover {
+  background-color: #e1f0da;
+}
+
+.notification-badge {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  padding: px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  line-height: 20px;
+}
+
+.navbar-item {
+  position: relative;
+}
+
+
+.container.container-home.web{
+  height: 100hv;
+}
+
+.container.container-home.web h2{
+  margin-top: 30px;
+}
+
+.container.container-home.web p{
+  margin-top: 20px;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+ 
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  height: 120px;
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  margin-top: 70px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card.card-text {
+  font-size: 25px;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 500;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+
+.container.container-home ul {
+  list-style: none;
+  padding: 0;
+  text-align: left; /* Align links to the left */
+}
+
+.container.container-home ul li {
+  padding: 10px 0;
+}
+
+.container.container-home ul li a {
+  color: #333;
+  text-decoration: none;
+  
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+  transition: background-color 0.3s;
+}
+
+.container.container-home ul li a:hover {
+  background-color: #e1f0da;
+}
+
+.container.container-home.past-medical{
+  width: 1000px;
+}
+
+.container.container-home.past-medical h2{
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+
+.container-home.web.particip {
+  display: flex;
+  justify-content: space-between;
+}
+.zoom, .inscriere {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+.inscriere input {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+.inscriere button {
+  margin-left: 20px;
+  padding: 10px;
+  background-color: #618264;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.inscriere {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrare verticală */
+  align-items: flex-start; /* Aliniere la stânga */
+  height: 100%;
+  margin-top: -100px;
+}
+
+.inscriere p{
+  margin-bottom: 30px;
+}
+
+.message {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-left: 6px solid;
+}
+.message.success {
+  background: #ddffdd;
+  border-color: #4CAF50;
+}
+.message.error {
+  background: #ffdddd;
+  border-color: #f44336;
+}
+
+.error-message {
+  color: red;
+}
+
+
+.footer-elements {
+  display: flex;
+  gap: 30px;
+  align-items: center; /* Aliniază elementele pe verticală */
+  padding: 20px; /* Padding pentru a crea spațiu în interiorul footerului */
+  padding-bottom: 0px;
+}
+
+.footer-item a {
+  text-decoration: none; /* Elimină sublinierea linkurilor */
+  color: #f4f4f4; /* Culoarea textului (poți schimba culoarea) */
+  transition: color 0.3s ease; /* Tranziție pentru schimbarea culorii */
+}
+
+.footer-item a:hover {
+  color: #A0C49D; /* Culoarea textului la hover (poți schimba culoarea) */
+}
+
+
+#secondary-footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #618264;
+  color: #fff;
+  padding-bottom: 0;
+  height: 100px;
+}
+#secondary-footer.small{
+  height: 50px;
+}
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 600; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Reducem lățimea modalului */
+  box-sizing: border-box; /* Asigurăm că paddingul este inclus în lățime */
+}
+
+.modal-content p,
+.modal-content h2,
+.modal-content h3 {
+  padding: 0 20px; /* Adăugăm padding pentru text */
+}
+.modal-content h2 {
+  padding-bottom: 20px;
+}
+.modal-content h3 {
+  padding-top: 20px;
+}
+
+.modal-content ul {
+  list-style: none; /* Eliminăm markerii standard */
+  padding-left: 50px;
+}
+
+.modal-content ul li {
+  position: relative; 
+  padding-left: 20px; /* Adăugăm padding la stânga pentru marker personalizat */
+}
+
+.modal-content ul li::before {
+  content: '•'; /* Adăugăm marker personalizat */
+  position: absolute;
+  left: 0;
+  color: black; /* Stilizăm markerul */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  padding-right: 20px; /* Adăugăm padding pentru butonul de închidere */
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.no-results {
+  display: none;
+  color: #618264;
+  font-weight: bold;
+}
